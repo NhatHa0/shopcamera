@@ -38,11 +38,11 @@ const productSchema = new mongoose.Schema({
         required: [true, 'Please select category for this product'],
         enum: {
             values: [
-                'Video Camera',
-                'Camera Security',
-                'Web Camera',
-                'Digital Camera',
-                'Fly Camera'
+                'TW',
+                'GAM',
+                'Rainbow',
+                'TS',
+                'VK'
             ],
             message: 'Please select correct category for product'
         }

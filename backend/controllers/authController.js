@@ -23,6 +23,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
         name,
         email,
         password,
+ 
         avatar: {
             public_id: result.public_id,
             url: result.secure_url
@@ -33,7 +34,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
 
 })
 
-// Login User  =>  /a[i/v1/login
+// Login User  =>  /ai/v1/login
 exports.loginUser = catchAsyncErrors(async (req, res, next) => {
     const { email, password } = req.body;
 

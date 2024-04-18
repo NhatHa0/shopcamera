@@ -1,38 +1,44 @@
-html,
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global Styles */
 body {
-  font-family: 'Amazon Ember';
+  font-family: 'Arial', sans-serif;
   width: 100%;
   height: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
 /* Scroll Bar */
-
 ::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
+  background-color: #f2f2f2;
 }
 
 ::-webkit-scrollbar {
   width: 8px;
-  background-color: #f5f5f5;
+  background-color: #f2f2f2;
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: rgba(66, 66, 66, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 0px;
   background-clip: padding-box;
   border-radius: 5px;
 }
 
 nav {
-  background-color: #232f3e;
+  background-color: #3f51b5;
   padding: 1rem 1rem;
 }
 
 #search_btn {
-  background-color: #0bcecf;
+  background-color: #2196f3;
 }
 
 .input-group {
@@ -47,9 +53,9 @@ nav {
 
 #login_btn,
 #view_btn {
-  background-color: #0bcecf;
+  background-color: #2196f3;
   padding: 0.4rem 1.8rem;
-  font-family: calibri;
+  font-family: Arial, sans-serif;
 }
 
 #cart {
@@ -58,7 +64,7 @@ nav {
 }
 
 #cart_count {
-  background-color: #0bcecf;
+  background-color: #2196f3;
   padding: 0.2rem 0.5rem;
   border-radius: 0.2rem;
   color: black;
@@ -76,11 +82,11 @@ nav {
 }
 
 .card-title a {
-  color: #2e2e2e;
+  color: #333;
 }
 
 .card-title a:hover {
-  color: #fa9c23;
+  color: #ff5722;
   text-decoration: none;
 }
 
@@ -93,7 +99,7 @@ nav {
 }
 
 #view_btn {
-  background-color: #0bcecf;
+  background-color: #2196f3;
   color: white;
 }
 
@@ -104,7 +110,7 @@ nav {
 
 .ratings {
   font-size: 1.2rem;
-  color: #fdcc0d;
+  color: #ff9800;
 }
 
 #no_of_reviews {
@@ -127,11 +133,11 @@ footer {
   display: inline-block;
   position: relative;
   font-family: FontAwesome;
-  color: #fdcc0d;
+  color: #ff9800;
 }
 
 .rating-outer::before {
-  content: '\f006 \f006 \f006 \f006 \f006';
+  content: '\f005 \f005 \f005 \f005 \f005';
 }
 
 .rating-inner {
@@ -145,7 +151,7 @@ footer {
 
 .rating-inner::before {
   content: '\f005 \f005 \f005 \f005 \f005';
-  color: #f8ce0b;
+  color: #ffc107;
 }
 
 /* Product Details Page */
@@ -162,7 +168,7 @@ footer {
 #cart_btn,
 #review_btn {
   border-radius: 2rem;
-  background-color: #0bcecf;
+  background-color: #2196f3;
   border: none;
   padding: 0.5rem 2rem;
 }
@@ -200,6 +206,7 @@ footer {
   height: 80px;
   padding-left: 0;
 }
+
 .loader:after {
   content: ' ';
   display: block;
@@ -207,14 +214,16 @@ footer {
   height: 64px;
   margin: 8px;
   border-radius: 50%;
-  border: 6px solid #fa9c23;
-  border-color: #fa9c23 transparent;
+  border: 6px solid #ff9800;
+  border-color: #ff9800 transparent;
   animation: lds-dual-ring 1.2s linear infinite;
 }
+
 @keyframes lds-dual-ring {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
@@ -240,22 +249,22 @@ footer {
 }
 
 #card_item_price {
-  color: #febd69;
+  color: #ff9800;
   font-weight: bold;
   font-size: 1.4rem;
 }
 
 #checkout_btn,
 .review-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ff5722;
+  border-color: #ff5722;
   margin-top: 2rem;
   border-radius: 5rem;
 }
 
 #view_order_details {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ff5722;
+  border-color: #ff5722;
 }
 
 #order_summary {
@@ -307,8 +316,8 @@ footer {
 }
 
 .wrapper form .btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ff5722;
+  border-color: #ff5722;
   color: white;
   margin-top: 2.5rem;
 }
@@ -347,10 +356,19 @@ footer {
 
 /* Header User Profile */
 .navbar {
-  background-color: #333333 ;
-  color: #fff; /* Optional: text color */
+  background-color: #3f51b5;
+  color: #fff;
+  /* Optional: text color */
   /* Add more styles as needed */
 }
+
+.navbar-brand img {
+  max-width: 100px;
+  /* Đặt chiều rộng tối đa là 100px */
+  max-height: 50px;
+  /* Đặt chiều cao tối đa là 50px */
+}
+
 .avatar-nav {
   margin-right: 0.6rem;
   height: 2.2rem;
@@ -387,11 +405,11 @@ footer {
 }
 
 .incomplete {
-  background: #eeeeee;
+  background: #f2f2f2;
 }
 
 .active-step {
-  background: #fa9c23;
+  background: #ff5722;
   color: #fff;
 }
 
@@ -399,7 +417,7 @@ footer {
   float: left;
   width: 0;
   border-top: 20px solid transparent;
-  border-left: 15px solid #fa9c23;
+  border-left: 15px solid #ff5722;
   border-bottom: 20px solid transparent;
   margin-left: -1px;
 }
@@ -407,9 +425,9 @@ footer {
 .triangle2-active {
   width: 0;
   float: left;
-  border-top: 20px solid #fa9c23;
+  border-top: 20px solid #ff5722;
   border-left: 15px solid #fff;
-  border-bottom: 20px solid #fa9c23;
+  border-bottom: 20px solid #ff5722;
   margin-right: -1px;
 }
 
@@ -417,7 +435,7 @@ footer {
   float: left;
   width: 0;
   border-top: 20px solid transparent;
-  border-left: 15px solid #eeeeee;
+  border-left: 15px solid #f2f2f2;
   border-bottom: 20px solid transparent;
   margin-left: -1px;
 }
@@ -425,9 +443,9 @@ footer {
 .triangle2-incomplete {
   width: 0;
   float: left;
-  border-top: 20px solid #eeeeee;
+  border-top: 20px solid #f2f2f2;
   border-left: 15px solid #fff;
-  border-bottom: 20px solid #eeeeee;
+  border-bottom: 20px solid #f2f2f2;
   margin-right: -1px;
 }
 
@@ -449,8 +467,8 @@ footer {
 }
 
 #edit_profile {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ff5722;
+  border-color: #ff5722;
 }
 
 /* Confirm Order */
@@ -461,8 +479,8 @@ footer {
 }
 
 .update-btn {
-  background-color: #fa9c23;
-  border-color: #fa9c23;
+  background-color: #ff5722;
+  border-color: #ff5722;
   color: white;
 }
 
@@ -472,16 +490,16 @@ footer {
 
 /* Pagination */
 .page-item.active .page-link {
-  background-color: #0bcecf;
-  border-color: #0bcecf;
+  background-color: #ff5722;
+  border-color: #ff5722;
 }
 
 .page-link {
-  color: #0bcecf;
+  color: #ff5722;
 }
 
 .page-link:hover {
-  color: #0bcecf;
+  color: #ff5722;
 }
 
 /* Admin Sidebar */
@@ -499,24 +517,27 @@ footer {
   top: 0;
   z-index: 10;
 }
+
 #sidebar {
   min-width: 100%;
   max-width: 100%;
-  background: #232f3e;
+  background: #3f51b5;
   color: #fff;
   transition: all 0.3s;
 }
+
 #sidebar.active {
   margin-left: -250px;
 }
 
 #sidebar .sidebar-header {
   padding: 20px;
-  background: #232f3e;
+  background: #3f51b5;
 }
+
 #sidebar ul.components {
   padding: 5px 0px;
-  border-bottom: 1px solid #232f3e;
+  border-bottom: 1px solid #3f51b5;
 }
 
 #sidebar ul li a {
@@ -526,8 +547,9 @@ footer {
   color: white;
   text-decoration: none;
 }
+
 #sidebar ul li a:hover {
-  color: #232f3e;
+  color: #3f51b5;
   background: #fff;
 }
 
@@ -535,14 +557,16 @@ footer {
   margin-right: 0.3rem;
 }
 
-#sidebar ul li.active > a,
+#sidebar ul li.active>a,
 a[aria-expanded='true'] {
   color: #fff;
-  background: #232f3e;
+  background: #3f51b5;
 }
+
 a[data-toggle='collapse'] {
   position: relative;
 }
+
 .dropdown-toggle::after {
   display: block;
   position: absolute;
@@ -554,7 +578,7 @@ a[data-toggle='collapse'] {
 ul ul a {
   font-size: 1rem !important;
   padding-left: 30px !important;
-  background: #232f3e;
+  background: #3f51b5;
 }
 
 ul.CTAs {
@@ -599,7 +623,7 @@ ul.CTAs a {
   list-style: none;
   font-size: 3rem;
   padding-left: 0.9rem;
-  color: #e3e3e3;
+  color: #e0e0e0;
 }
 
 .star:first-child {
@@ -607,11 +631,11 @@ ul.CTAs a {
 }
 
 .orange {
-  color: #fa9c23;
+  color: #ff9800;
 }
 
 .yellow {
-  color: #fdcc0d;
+  color: #ffc107;
 }
 
 .review_user {

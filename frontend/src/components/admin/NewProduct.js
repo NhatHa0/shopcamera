@@ -20,11 +20,11 @@ const NewProduct = ({ history }) => {
     const [imagesPreview, setImagesPreview] = useState([])
 
     const categories = [
-        'Video Camera',
-        'Camera Security',
-        'Web Camera',
-        'Digital Camera',
-        'Fly Camera'
+        'TW',
+        'GAM',
+        'Rainbow',
+        'TS',
+        'VK'
 
     ]
 

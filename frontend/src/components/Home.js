@@ -22,11 +22,11 @@ const Home = ({ match }) => {
     const [rating, setRating] = useState(0)
 
     const categories = [
-        'Video Camera',
-        'Camera Security',
-        'Web Camera',
-        'Digital Camera',
-        'Fly Camera'
+        'TW',
+        'GAM',
+        'Rainbow',
+        'TS',
+        'VK'
     ]
 
     const alert = useAlert();
@@ -59,9 +59,9 @@ const Home = ({ match }) => {
         <Fragment>
             {loading ? <Loader /> : (
                 <Fragment>
-                    <MetaData title={'Buy Camera Online'} />
+                    <MetaData title={'Ban Do'} />
 
-                    <h1 id="products_heading">Latest Products</h1>
+                    <h1 id="products_heading">Products</h1>
 
                     <section id="products" className="container mt-5">
                         <div className="row">
@@ -110,36 +110,6 @@ const Home = ({ match }) => {
                                                 </ul>
                                             </div>
 
-                                            <hr className="my-3" />
-
-                                            <div className="mt-5">
-                                                <h4 className="mb-3">
-                                                    Ratings
-                                                </h4>
-
-                                                <ul className="pl-0">
-                                                    {[5, 4, 3, 2, 1].map(star => (
-                                                        <li
-                                                            style={{
-                                                                cursor: 'pointer',
-                                                                listStyleType: 'none'
-                                                            }}
-                                                            key={star}
-                                                            onClick={() => setRating(star)}
-                                                        >
-                                                            <div className="rating-outer">
-                                                                <div className="rating-inner"
-                                                                    style={{
-                                                                        width: `${star * 20}%`
-                                                                    }}
-                                                                >
-                                                                </div>
-                                                            </div>
-                                                        </li>
-                                                    ))}
-                                                </ul>
-                                            </div>
-
                                         </div>
                                     </div>
 
@@ -153,7 +123,7 @@ const Home = ({ match }) => {
                                 </Fragment>
                             ) : (
                                     products.map(product => (
-                                        <Product key={product._id} product={product} col={3} />
+                                        <Product key={product._id} product={product} col={3} showRating={false} />
                                     ))
                                 )}
 
